@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     box-shadow: 0 2px 20px rgb(46 46 46 / 20%);
+    margin-bottom: 0px;
 }
 
 .navContainer {

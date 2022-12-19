@@ -26,6 +26,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 }
 
 .headerListItem.active {
@@ -33,6 +34,13 @@
     padding: 10px;
     border-radius: 20px;
 }
+
+
+/* .headerListItem:hover{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+} */
 
 .headerDesc {
     margin: 20px 0px;
@@ -135,20 +143,21 @@
 
 .upload {
     border: 3px solid rgb(255, 255, 255);
-    padding-left: 10px;
+    padding: 10px 10px;
     border-radius: 10px;
     flex: 2;
     background-color: white;
 }
 
 .headeruploadDesc {
-    margin: 10px 0 10px;
+    margin: 10px 0 5px;
     color: #000;
 }
 
 .headeruploadTitle {
-    font-size: 28px;
+    font-size: 26px;
     color: #000;
+    font-weight: 700;
 }
 
 .uploadBtn {
