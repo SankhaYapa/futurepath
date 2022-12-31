@@ -1,0 +1,71 @@
+.coursePage{
+    display: flex;
+    align-content: center;
+    margin: 20px 20px;
+}
+.courseSideBar{
+    flex: 3;
+}
+
+.courseRightBar{
+    flex: 9;
+
+}
+.cc{
+    font-weight: 700;
+    font-size: 20px;
+    /* margin-top: 20px; */
+    padding-left: 20px;
+    position: sticky;
+    top: 60px;
+    z-index: 999;
+    height: 30px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+.hrr{
+    background-color: black;
+}
+.courseContentList{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 18px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.cList{
+    top:70px;
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+    position: sticky;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(179, 179, 179);
+}
+.courseContentList:hover{
+background-color: rgb(178, 249, 225);
+}
+.time{
+    font-size: 12px;
+}
+.courseContentListTitle{
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+}
+input.CheckBox {
+    margin: 4px 0 0;
+    margin-top: 1px\9;
+    line-height: normal;
+    width: 18px;
+
+}
