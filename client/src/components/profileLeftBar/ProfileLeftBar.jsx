@@ -12,53 +12,85 @@ import {
   faMessage,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 export const ProfileLeftBar = () => {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+  const [user, setUser] = useState({});
+  const username = useParams().username;
+  const { user: currentUser } = useContext(AuthContext);
+  const [followed, setFollowed] = useState(false);
+
+  // useEffect(() => {
+  //   setFollowed(currentUser.followings.includes(user?.id));
+  // }, [currentUser, user.id]);
+  console.log(username);
+  useEffect(() => {
+    const fetchUser = async () => {
+      const res = await axios.get(`/users?username=${username}`);
+      setUser(res.data);
+      console.log("gig.userId");
+    };
+    fetchUser();
+  }, []);
+  const handleClick = async () => {
+    try {
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="profielLeft">
-      <img src={PF + "person/profile.jpg"} alt="" className="UserprofileImg" />
-      <h1 className="Username">SANKHA BANDARA</h1>
-      <span>Kandy,Sri Lanka</span>
-      <div className="AreaButtons">
-        <button className="ContactBtn">
-          <FontAwesomeIcon icon={faCartArrowDown}></FontAwesomeIcon>
-          {" Follow"}
-        </button>
-        <button className="ContactBtn">
-          <FontAwesomeIcon icon={faMessage}></FontAwesomeIcon>
-          {" Contact Me"}
-        </button>
-      </div>
-
+      <img
+        src={PF + "person/profile.jpg"}
+        alt=""
+        className="UserprofileImage"
+      />
+      <h1 className="Username">{user.username}</h1>
+      <span>
+        {user.city},{user.country}
+      </span>
+      {user.username !== currentUser.username && (
+        <div className="AreaButtons">
+          <button className="ContactBtn" onClick={handleClick}>
+            <FontAwesomeIcon icon={faCartArrowDown}></FontAwesomeIcon>
+            {/* {followed ? "Unfollow" : "Followed"} */}
+          </button>
+          <button className="ContactBtn">
+            <FontAwesomeIcon icon={faMessage}></FontAwesomeIcon>
+            {" Contact Me"}
+          </button>
+        </div>
+      )}
       <div className="Location">
         <div>
           <FontAwesomeIcon icon={faLocationPin}></FontAwesomeIcon>
           <span> From</span>
         </div>
-        <span>Kandy</span>
+        <span>
+          {user.city},{user.country}
+        </span>
       </div>
       <div className="Location">
         <div>
           <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
           <span> Phone</span>
         </div>
-        <span>0763423567</span>
+        <span>{user.phone}</span>
       </div>
       <div className="Location">
         <div>
           <FontAwesomeIcon icon={faMailBulk}></FontAwesomeIcon>
           <span> Mail</span>
         </div>
-        <span className="subdetails">sankhapriyamantha55@gmail.com</span>
+        <span className="subdetails">{user.email}</span>
       </div>
       <div>
         <h4 className="Description">Description</h4>
-        <span>
-          If you are using text-overflow:ellipsis, the browser will show the
-          contents whatever possible within that container. But if you want to
-          specifiy the number of letters before the dots or strip some contents
-          and add dots, you can use the below function.
-        </span>
+        <span>{user.desc}</span>
       </div>
       <div className="SkillsDiv">
         <h4 className="Description">Skills</h4>

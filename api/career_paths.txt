@@ -1,0 +1,31 @@
+Product Manager
+    - Business Analyst
+    - Product Marketing Manager
+    - Product Designer
+    - User Experience Researcher
+
+Data Scientist
+- Machine Learning Engineer
+- Data Analyst
+- Business Intelligence Analyst
+- Data Engineer
+
+Software Developer
+- Web Developer
+- Mobile Developer
+- Full Stack Developer
+- DevOps Engineer
+- Cloud Engineer
+
+Project Manager
+- Scrum Master
+- Agile Project Manager
+- Program Manager
+- Operations Manager
+
+Cybersecurity Specialist
+- Penetration Tester
+- Security Analyst
+- Security Engineer
+- Certified Information Systems Security Professional (CISSP)
+

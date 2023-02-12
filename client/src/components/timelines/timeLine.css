@@ -1,0 +1,81 @@
+.Timeline{
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+.TimeLineWrapper{
+    width: 100%;
+    max-width: 1400px;
+    margin: 20px 0px 100px 0px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+  
+}
+.TimelineContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.hed{
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  
+}
+
+.courseTimeLine{
+    
+    display: flex;
+    flex-direction: column;
+margin-bottom: 30px;
+padding-left: 10px;
+}
+
+
+
+
+.profileImg{
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.profileImgAndName{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+.uname{
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+}
+.gig{
+    border: 1px solid rgb(200, 200, 200) ;
+    margin: 10px;
+    
+    
+}
+.gigImg{
+    height: 150px;
+    width: 250px;
+    margin-bottom: 5px;
+}
+.titlegig{
+
+
+font-size: 16px;
+    font-weight: 400;
+   
+    word-wrap: break-word;
+}
+.titlegigwrapper{
+    padding-bottom: 10px;
+    width: 245px;
+    padding-left: 10px;
+
+  
+}

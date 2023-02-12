@@ -53,6 +53,10 @@ flex-direction: column;
     padding: 10px;
     font-weight: 600;
 }
+.browseImagesDiv{
+    display: flex;
+    gap: 10px;
+}
 .browseImage{
     margin-top: 10px;
     background-color: rgb(255, 255, 255);
@@ -60,9 +64,24 @@ flex-direction: column;
     width: 30%;
     border-radius: 10px;
     position: relative;
-    margin-left: 10px;
+ 
     border: 1px dashed black;
 }
+.gigThumImg{
+    height: 130px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    
+}
+.browseImageShowContainer:before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    background: rgb(227, 227, 227,0.1);
+    border-radius: 10px;
+  }
 .uploadImageIconBox{
     display: flex;
     justify-content: center;
@@ -72,4 +91,17 @@ flex-direction: column;
 }.browseImagesDiv{
     display: flex;
 
+}
+
+.browseImageShowContainer{
+  position: relative;
+}
+.uploadImgCancel{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    cursor: pointer;
+   
 }

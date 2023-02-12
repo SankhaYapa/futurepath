@@ -19,10 +19,32 @@ const UserSchema = new mongoose.Schema(
       required: true,
       min: 6,
     },
+   country:{
+    type:String,
+    default: null,
+
+   },
+   city:{
+    type:String,
+    default: null,
+   },
+   desc:{
+    type:String,
+    default: null,
+    max: 500,
+   },
     phone: {
       type: String,
-      required: true,
+      default: null,
       max: 11,
+    },
+    followers: {
+      type: Array,
+      default: [],
+    },
+    followings: {
+      type: Array,
+      default: [],
     },
     isAdmin: {
       type: Boolean,

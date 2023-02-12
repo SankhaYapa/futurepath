@@ -5,6 +5,7 @@ import {
   faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import "./courses.css";
 
 export const Courses = () => {
@@ -22,31 +23,27 @@ export const Courses = () => {
       </div>
 
       <div className="coursesTab">
-        <div className="course">
-          <img src={PF + "/post/1.jpeg"} alt="" className="courseImg" />
-          <span className="title">
-            Learn PHP for Beginners Learn PHP for Beginners
-          </span>
-        </div>
-        <div className="course">
-          <img src={PF + "/post/1.jpeg"} alt="" className="courseImg" />
-          <span className="title">Learn PHP for Beginners</span>
-        </div>
-        <div className="course">
-          <img src={PF + "/post/1.jpeg"} alt="" className="courseImg" />
-          <span className="title">Learn PHP for Beginners</span>
-        </div>
-        <div className="course">
-          <img src={PF + "/post/1.jpeg"} alt="" className="courseImg" />
-          <span className="title">Learn PHP for Beginners</span>
-        </div>
-        <div className="course">
-          <img src={PF + "/post/1.jpeg"} alt="" className="courseImg" />
-          <span className="title">Learn PHP for Beginners</span>
-        </div>
-        <div className="course">
-          <img src={PF + "/post/1.jpeg"} alt="" className="courseImg" />
-          <span className="title">Learn PHP for Beginners</span>
+        <div className="TimelineContainer">
+          <div className="gig">
+            <img src={PF + "/post/js.png"} alt="" className="gigImg" />
+            {/* 
+            <div className="profileImgAndName"> */}
+            {/* <img
+                src={
+                  user.profilePicture
+                    ? PF + user.profilePicture
+                    : PF + "person/profile.jpg"
+                }
+                alt=""
+                className="profileImg"
+              /> */}
+            {/* <span className="uname"></span>
+            </div> */}
+
+            <div className="titlegigwrapper">
+              <span className="titlegig">JavaScript Basics for Beginners</span>
+            </div>
+          </div>
         </div>
       </div>
     </>

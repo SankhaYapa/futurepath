@@ -14,26 +14,36 @@ import "./header.css";
 
 import { useState } from "react";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = ({ type }) => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("./newResume");
+    navigate("./uploadResume");
   };
   return (
     <div className="header">
       <div className="headerContainer">
         <div className="headerList">
-          <div className="headerListItem">
-            <FontAwesomeIcon icon={faBriefcase} />
+          <Link
+            to={"./jobs"}
+            style={{ textDecoration: "none", color: "white" }}
+          >
+            <div className="headerListItem">
+              <FontAwesomeIcon icon={faBriefcase} />
 
-            <span>Jobs</span>
-          </div>
-          <div className="headerListItem">
-            <FontAwesomeIcon icon={faHandshakeAngle} />
-            <span>Career Advice</span>
-          </div>
+              <span>Jobs</span>
+            </div>
+          </Link>
+          <Link
+            to={"./careerAdvice"}
+            style={{ textDecoration: "none", color: "white" }}
+          >
+            <div className="headerListItem">
+              <FontAwesomeIcon icon={faHandshakeAngle} />
+              <span>Career Advice</span>
+            </div>
+          </Link>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faBriefcase} />
             <span>Recommended Jobs</span>

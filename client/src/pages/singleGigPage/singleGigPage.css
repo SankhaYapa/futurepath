@@ -1,0 +1,75 @@
+.singleGigPage{
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.singleGigPageContainer{
+    width: 100%;
+    max-width: 1084px;
+    margin: 20px 0px 100px 0px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+    /* border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 2px 0px #03cf03;
+    box-shadow: 0px 0px 2px 0px #296d09; */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.Titel{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.category{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.UserprofileImg{
+    height: 50px;
+    width: 50px;
+    border: none;
+   
+}.UserName{
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: black;
+}
+.GigImage{
+    margin-top: 20px;
+    height: 512px;
+    width: 1024px;
+    background-attachment: fixed;
+}
+.AboutGig{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.ButtonHire{
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: yellow;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    -webkit-box-shadow: 0px 0px 2px 0px #c4ff02;
+    box-shadow: 0px 0px 2px 0px #5a5b50; 
+}
+.Conact{
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #1dbf73;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+    -webkit-box-shadow: 0px 0px 2px 0px #03cf03;
+    box-shadow: 0px 0px 2px 0px #296d09; 
+}

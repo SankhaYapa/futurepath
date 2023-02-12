@@ -1,0 +1,42 @@
+.profileImg{
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.profileImgAndName{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+.uname{
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+}
+.gig{
+    border: 1px solid rgb(200, 200, 200) ;
+    margin: 10px;
+    
+    
+}
+.gigImg{
+    height: 150px;
+    width: 250px;
+    margin-bottom: 5px;
+}
+.titlegig{
+
+
+font-size: 16px;
+    font-weight: 400;
+   
+    word-wrap: break-word;
+}
+.titlegigwrapper{
+    padding-bottom: 10px;
+    width: 245px;
+    padding-left: 10px;
+
+  
+}

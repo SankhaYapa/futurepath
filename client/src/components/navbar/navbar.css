@@ -12,7 +12,7 @@
 
 .navContainer {
     width: 100%;
-    max-width: 1024px;
+    max-width: 1400px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,4 +52,26 @@
     padding: 7px 20px;
     border-radius: 5px;
     background-color: white;
+}
+.navBarImg{
+    width: 40px;
+    height: 40px;
+border-radius: 50%;
+}
+.NavUserProfile{
+    background-color: rgb(214, 214, 214);
+    padding-left: 20;
+    padding-right: 0;
+  
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.UName{
+    padding-left: 10px;
+    font-weight: 700;
+    font-size: 17px;
+    padding-right: 10px;
+    color: black;
 }

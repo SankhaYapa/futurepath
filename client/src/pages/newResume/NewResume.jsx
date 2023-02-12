@@ -15,15 +15,36 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./newResume.css";
 import { Navbar } from "../../components/navbar/Navbar";
+import { useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 export const NewResume = () => {
+  const [cvText, setCvText] = useState("");
+  const [careerPath, setCareerPath] = useState("");
+
+  const handleSubmit = async () => {
+    await axios
+      .post("http://localhost:5000/api/careerpath", {
+        cvtext: cvText,
+      })
+      .then((response) => {
+        setCareerPath(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <div>
       <Navbar />
       <div className="uploadResumePage">
         <div className="uploadResumeContainer">
           <div className="uploadResumeDiv">
-            <span className="back">{"< "}Back</span>
+            <Link to="/uploadResume">
+              <span className="back">{"< "}Back</span>
+            </Link>
             <h1 className="resumeTitle">UPLOAD A RESUME</h1>
             <span className="resumeDsc">
               We’ll store your resume to enable you to recommend courses that
@@ -49,12 +70,18 @@ export const NewResume = () => {
                 id=""
                 cols="30"
                 rows="10"
+                value={cvText}
+                onChange={(e) => setCvText(e.target.value)}
               ></textarea>
             </div>
 
             <div className="uploadResumeButtonDiv">
-              <button className="uploadResumeButton"> Upload My Resume</button>
+              <button className="uploadResumeButton" onClick={handleSubmit}>
+                {" "}
+                Upload My Resume
+              </button>
             </div>
+            <p>Career Path: {careerPath}</p>
           </div>
         </div>
       </div>
