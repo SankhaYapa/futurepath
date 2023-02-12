@@ -1,0 +1,24 @@
+.jobs{
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+.jobsWrapper{
+    width: 100%;
+    max-width: 1400px;
+    margin: 20px 0px 100px 0px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+  
+}
+.TitleJobs{
+    font-size: 30px !important;
+    font-weight: 600;
+}
+.jobList{
+    display: flex;
+    flex-direction: column;
+    
+}
