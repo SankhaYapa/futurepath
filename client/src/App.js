@@ -9,6 +9,7 @@ import { CreateGigs } from "./pages/createGigPage/CreateGigs";
 import { Home } from "./pages/home/Home";
 import { Jobs } from "./pages/jobs/Jobs";
 import Login from "./pages/login/Login";
+
 import { NewResume } from "./pages/newResume/NewResume";
 import { Profile } from "./pages/profile/Profile";
 import { Career } from "./pages/recommendation/Career";
@@ -36,6 +37,10 @@ function App() {
       <Route path="/recommendation" element={<Career/>} />
       <Route path="/jobs" element={<Jobs/>} />
       <Route path="/careerAdvice" element={<CareerAdvice/>} />
+      {/* <Route
+          path="/messanger"
+          element={user ? <Messanger /> : <Register />}
+        ></Route> */}
       </Routes>
     </BrowserRouter> 
 );

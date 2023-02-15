@@ -25,7 +25,7 @@ export const NewResume = () => {
 
   const handleSubmit = async () => {
     await axios
-      .post("http://localhost:5000/api/careerpath", {
+      .post("http://localhost:8800/api/careerpath", {
         cvtext: cvText,
       })
       .then((response) => {

@@ -1,0 +1,117 @@
+.advice{
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    
+}
+.adviceWrapper{
+    width: 100%;
+    max-width: 1400px;
+    margin: 20px 0px 100px 0px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+  
+}
+.Titleadvice{
+    font-size: 20px !important;
+    font-weight: 600;
+}
+.jobList{
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+margin-top: 20px;
+    
+}
+.addAdvicediv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.addAdvice{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.dialog-form-advice {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 25%;
+    z-index: 1;
+
+  }
+.AddAdviceTitle{
+    display: flex;
+    justify-content: center;
+}
+.addJobLables{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.CountLetters{
+    display: flex;
+    justify-content: end;
+}
+.inputAdvice{
+    width: 100%;
+   font-size: 16px;
+    border: 1px solid;
+    padding: 5px;
+}
+.Days{
+ width: 70px;
+
+ border: 1px solid;
+}
+.postaAdvicer{
+    display: flex;
+    justify-content: end;
+}
+.postaAdvicerButton{
+    padding:10px 20px 10px 20px;
+    background-color: rgb(7, 127, 19);
+    color: white;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+}
+.TableBoost{
+    margin-top: 20px;
+}
+.AddOffer{
+    background-color: rgb(251, 255, 2);
+    padding: 5px;
+    border-radius: 5px;
+}
+.CarouselSlicerDiv{
+    display: flex;
+    padding: 10px;
+
+}
+.CardProImg{
+    width: 60px;
+    height: 60px;
+border-radius: 50%;
+text-align: center;
+}

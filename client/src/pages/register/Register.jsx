@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./register.css";
 
 export default function Register() {
@@ -9,6 +9,7 @@ export default function Register() {
   const password = useRef();
   const passwordAgain = useRef();
   const navigate = useNavigate();
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -36,44 +37,57 @@ export default function Register() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <div className="loginBox">
-            <form action="" className="loginBox" onSubmit={handleClick}>
-              <input
-                placeholder="Username"
-                ref={username}
-                className="loginInput"
-                required
-              />
-              <input
-                placeholder="Email"
-                type="email"
-                ref={email}
-                className="loginInput"
-              />
-              <input
-                placeholder="Password"
-                ref={password}
-                className="loginInput"
-                required
-                type="password"
-              />
-              <input
-                placeholder="Password Again"
-                ref={passwordAgain}
-                className="loginInput"
-                required
-                type="password"
-              />
-              <button className="loginButton" type="submit">
-                Sign Up
-              </button>
-              <button className="loginRegisterButton" onClick={routeChange}>
-                Log into Account
-              </button>
-            </form>
-          </div>
+          <form action="" className="loginBox" onSubmit={handleClick}>
+            <span className="SignInName">Sign Up Now.</span>
+            <span className="details">Enter your details below.</span>
+            <input
+              placeholder="Username"
+              ref={username}
+              className="loginInput"
+              required
+            />
+            <input
+              placeholder="Email"
+              type="email"
+              ref={email}
+              className="loginInput"
+            />
+            <input
+              placeholder="Password"
+              ref={password}
+              className="loginInput"
+              required
+              type="password"
+            />
+            <input
+              placeholder="Password Again"
+              ref={passwordAgain}
+              className="loginInput"
+              required
+              type="password"
+            />
+            <button className="loginButton" type="submit">
+              Sign Up
+            </button>
+            <div className="loginRegister">
+              <span className="notamem">Already a member?</span>
+              <Link to={"/login"}>
+                <button className="loginRegisterButton" onClick={routeChange}>
+                  Log into Account
+                </button>
+              </Link>
+            </div>
+          </form>
         </div>
-        <div className="loginRight"></div>
+        <div
+          className="LoginRight"
+          style={{
+            backgroundImage: `url(${PF + "backpng.png"})`,
+
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+        ></div>
       </div>
     </div>
   );

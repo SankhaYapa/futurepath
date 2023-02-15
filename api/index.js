@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const helmet = require("helmet");
 const morgan = require("morgan");
+const cors = require("cors");
 
 var pyshell =  require('python-shell');
 const fs = require('fs');
@@ -14,7 +15,13 @@ const userRoute=require("./routes/users")
 const authRoute=require("./routes/auth")
 const courseRoute=require("./routes/courseroute")
 const gigRoute = require("./routes/gigs");
+const jobRoute=require("./routes/jobs")
+const advicerRoute=require("./routes/advicer")
+const conversaionRoute = require("./routes/conversaion");
+const messagesRoute = require("./routes/messages");
 
+
+app.use(cors());
 // Recommendation part
 app.post('/api/careerpath', (req, res) => {
   const {cvtext} = req.body;
@@ -58,8 +65,14 @@ mongoose.connect(process.env.MONGO_URL,() => {
 app.use("/images", express.static(path.join(__dirname, "public/images")));  
 //middleware
 app.use(express.json());
-app.use(helmet())
+app.use(
+  helmet({
+    crossOriginEmbedderPolicy: false,
+    // ...
+  })
+);
 app.use(morgan("common"))
+
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -84,7 +97,11 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
 app.use("/api/users",userRoute)
 app.use("/api/auth",authRoute)
 app.use("/api/courseroute",courseRoute)
-app.use("/api/gigs", gigRoute);
+app.use("/api/gigs", gigRoute)
+app.use("/api/jobs",jobRoute)
+app.use("/api/advicer",advicerRoute)
+app.use("/api/conversation", conversaionRoute);
+app.use("/api/messages", messagesRoute);
 
 app.listen(8800,()=>{
     console.log("Backend server is running")

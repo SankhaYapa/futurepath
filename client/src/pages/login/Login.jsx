@@ -21,15 +21,7 @@ export default function Login() {
   console.log(user);
   return (
     <div className="login">
-      <div
-        className="loginWrapper"
-        style={{
-          backgroundImage: `url(${PF + "background2.jpg"})`,
-
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      <div className="loginWrapper">
         <div className="loginLeft">
           <form className="loginBox" onSubmit={handleClick}>
             <span className="SignInName">Sign In Now.</span>
@@ -67,6 +59,15 @@ export default function Login() {
             </div>
           </form>
         </div>
+        <div
+          className="LoginRight"
+          style={{
+            backgroundImage: `url(${PF + "backpng.png"})`,
+
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+        ></div>
       </div>
     </div>
   );
